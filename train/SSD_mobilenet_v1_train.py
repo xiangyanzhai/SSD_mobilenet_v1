@@ -235,7 +235,7 @@ class SSD():
                 else:
                     sess.run(train_op)
 
-                if (i + 1) % 5000 == 0 or ((i + 1) % 1000 == 0 and i < 10000) or i + 1 == int(60010 * x):
+                if (i + 1) % 5000 == 0 or ((i + 1) % 1000 == 0 and i < 10000) or (i + 1) == int(60010 * x):
                     saver.save(sess, os.path.join('./models/', 'SSD300_1.ckpt'), global_step=i + 1)
 
             pass
